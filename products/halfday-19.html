@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '658561316530718');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=658561316530718&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+
 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +24,7 @@
     <!-- 設置 Canonical 標籤
 
   • 在每個網站的 <head> 中加入 <link rel="canonical"> 標籤，告訴 Google 哪個 URL 是標準版本。 -->
-  <link rel="canonical" href="https://truelovebnb.tw/products/halfday-19.html">
+  <link rel="canonical" href="https://www.truelovebnb.tw/products/halfday-19.html">
    
     
 
@@ -560,6 +544,32 @@
  
 </nav>
 
+<!-- 改善回上一層 會關掉navi bar -->
+<script>
+   
+  document.addEventListener('DOMContentLoaded', function () {
+  // 找到左右兩個 collapse 區塊
+  const collapses = document.querySelectorAll('.navbar-collapse');
+
+  // 找到所有 collapse 區塊裡的 a 連結
+  const allLinks = document.querySelectorAll('.navbar-collapse a');
+
+  allLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      // 手機版才收起
+      if (window.innerWidth < 992) {
+        // 如果是 dropdown toggle，就不要收起
+        if (!link.classList.contains('dropdown-toggle')) {
+          collapses.forEach(collapse => {
+            collapse.classList.remove('show');
+          });
+        }
+      }
+    });
+  });
+});
+</script>
+
   <main class="main pt-4">
     <div class="container">
       <div class="row">
@@ -734,7 +744,101 @@
               </ul>
 
 
-               
+               <!-- 加入購物車 -->
+               <hr>
+               <h4 class="fw-bold ">加入購物車</h4>
+               <div class="simpleCart_shelfItem">
+                 <h2 class="item_name">海玩子拖曳傘 </h2>
+                 <div class="input-group mb-3">
+                   <label class="input-group-text" aria-label="行程類型">行程類型</label>
+                   <select class="item_type form-select">
+                     
+                     
+                     
+                     <option>
+                       
+                     
+                     
+                     
+                       成人
+ NT$1,600</option>
+                     
+                     
+                   </select>
+                 </div>
+ 
+                 <div class="input-group mb-3">
+                   <label class="input-group-text" aria-label="預訂日期">預訂日期</label>
+                   <input type="date" class="item_date form-control text-start" id="currentDate" />
+                 </div>
+ 
+                 
+                 
+                 <div class="input-group mb-3">
+                   <label class="input-group-text" aria-label="活動場次">活動場次</label>
+                   <select type="text" class="item_session form-select">
+                     
+                     <option value='09:00'>09:00</option>
+                     
+                     <option value='11:00'>11:00</option>
+                     
+                     <option value='14:00'>14:00</option>
+                     
+                     <option value='16:00'>16:00</option>
+                     
+                   </select>
+                 </div>
+                 
+                 <div class="input-group mb-3">
+                   <label class="input-group-text" aria-label="選購數量">選購數量</label>
+                   <select type="text" class="item_quantity form-select" value="1">
+                     
+                     <option value='1'>1</option>
+                     
+                     <option value='2'>2</option>
+                     
+                     <option value='3'>3</option>
+                     
+                     <option value='4'>4</option>
+                     
+                     <option value='5'>5</option>
+                     
+                     <option value='6'>6</option>
+                     
+                     <option value='7'>7</option>
+                     
+                     <option value='8'>8</option>
+                     
+                     <option value='9'>9</option>
+                     
+                     <option value='10'>10</option>
+                     
+                     <option value='11'>11</option>
+                     
+                     <option value='12'>12</option>
+                     
+                     <option value='13'>13</option>
+                     
+                     <option value='14'>14</option>
+                     
+                     <option value='15'>15</option>
+                     
+                     <option value='16'>16</option>
+                     
+                     <option value='17'>17</option>
+                     
+                     <option value='18'>18</option>
+                     
+                     <option value='19'>19</option>
+                     
+                     <option value='20'>20</option>
+                     
+                   </select>
+                 </div>
+                 <div class="d-grid gap-2 col-8 col-md-6 mx-auto">
+                   <button type="button" id="item_add" class="item_add btn btn-dark">加入購物車</button>
+                 </div>
+               </div>
 
 
               <!-- 地圖資訊 S-->
